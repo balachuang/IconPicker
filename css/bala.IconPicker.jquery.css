@@ -1,0 +1,54 @@
+div.balaIconPicker-icon-displayer {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: white;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: solid 1px rgb(200,200,200);
+}
+
+div.balaIconPicker-icon-container-displayer {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: white;
+	border: solid 1px rgb(200,200,200);
+	position: absolute;
+	overflow: hidden;
+}
+
+div.balaIconPicker-icon-container {
+	background: none;
+	border: none;
+	position: absolute;
+	overflow: scroll;
+}
+
+div.balaIconPicker-null-icon {
+	background-image: url(bala.IconPicker.nullIcon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: white;
+	float: left;
+	margin: 3px;
+	border: none;
+}
+
+div.balaIconPicker-null-icon:hover {
+	background-color: rgb(225,225,225);
+}
+
+div.balaIconPicker-common-icon {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: white;
+	float: left;
+	margin: 3px;
+	border: none;
+}
+
+div.balaIconPicker-common-icon:hover {
+	background-color: rgb(225,225,225);
+}
+
