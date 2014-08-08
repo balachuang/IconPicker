@@ -1,7 +1,7 @@
 {
 	"name": "bala.IconPicker",
-	"version": "0.1.1",
-	"title": "imagesLoaded",
+	"version": "0.1.2",
+	"title": "bala.IconPicker",
 	"description": "A simple jQuery Icon Picker plugin.",
 	"keywords": [
 		"icon",
@@ -11,12 +11,12 @@
 	],
 	"author": {
 		"name": "Bala Chuang",
-		"email": ""
+		"email": "balachuang@gmail.com"
 	},
 	"maintainers": [
 		{
 			"name": "Bala Chuang",
-			"email": ""
+			"email": "balachuang@gmail.com"
 		}
 	],
 	"licenses": [
@@ -25,10 +25,10 @@
 			"url": "http://www.example.com/licenses/gpl.html"
 		}
 	],
-	"bugs":"",
-	"homepage": "",
-	"docs": "",
-	"download": "",
+	"bugs": "https://github.com/balachuang/IconPicker/issues",
+	"homepage": "http://balachuang.github.io/IconPicker",
+	"docs": "https://github.com/balachuang/IconPicker",
+	"download": "https://github.com/balachuang/IconPicker",
 	"dependencies": {
 		"jquery": ">=1.8"
 	}
