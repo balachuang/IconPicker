@@ -1,0 +1,35 @@
+{
+  "name": "IconPicker",
+  "version": "0.1.0",
+  "title": "imagesLoaded",
+  "description": "A simple jQuery Icon Picker plugin.",
+  "keywords": [
+    "icon",
+    "picker",
+	"icon picker",
+	"bala"
+  ],
+  "author": {
+    "name": "Bala Chuang",
+    "email": "balachuang@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "Bala Chuang",
+    "email": "balachuang@gmail.com"
+    }
+  ],
+  "licenses": [
+    {
+     "type": "GPLv2",
+        "url": "http://www.example.com/licenses/gpl.html"
+    }
+  ],
+  "bugs": "https://github.com/balachuang/IconPicker/issues",
+  "homepage": "https://github.com/balachuang/IconPicker",
+  "docs": "https://github.com/balachuang/IconPicker",
+  "download": "https://github.com/balachuang/IconPicker",
+  "dependencies": {
+    "jquery": ">=1.8"
+  }
+}
