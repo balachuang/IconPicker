@@ -7,36 +7,160 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <link rel="stylesheet" href="css/bala.IconPicker.jquery.css">
+    <!-- script src="javascripts/scale.fix.js"></script -->
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="js/bala.IconPicker.jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#picker1').IconPicker({
+				'iconSize' : 30,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker2').IconPicker({
+				'iconSize' : 30,
+				'hasNullIcon' : false,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker3').IconPicker({
+				'iconSize' : 30,
+				'hasNullIcon' : true,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp3 img').attr('src', imgUrl);
+				}
+			});
+		});
+	</script>
   </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Iconpicker</h1>
-        <p>A simple jQuery Icon Picker plugin.</p>
-        <p class="view"><a href="https://github.com/balachuang/IconPicker">View the Project on GitHub <small>balachuang/IconPicker</small></a></p>
-        <ul>
-          <li><a href="https://github.com/balachuang/IconPicker/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/balachuang/IconPicker/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/balachuang/IconPicker">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="balaiconpicker" class="anchor" href="#balaiconpicker"><span class="octicon octicon-link"></span></a>bala.IconPicker</h3>
+<body>
+
+<div class="wrapper">
+	<header>
+		<h1>bala.IconPicker</h1>
+		<p>A simple jQuery Icon Picker plugin.</p>
+		<p class="view"><a href="https://github.com/balachuang/IconPicker">View the Project on GitHub <small>balachuang/IconPicker</small></a></p>
+		<ul>
+			<li><a href="https://github.com/balachuang/IconPicker/zipball/master">Download <strong>ZIP File</strong></a></li>
+			<li><a href="https://github.com/balachuang/IconPicker/tarball/master">Download <strong>TAR Ball</strong></a></li>
+			<li><a href="https://github.com/balachuang/IconPicker">View On <strong>GitHub</strong></a></li>
+		</ul>
+	</header>
+	<section>
+		<h3><a name="balaiconpicker" class="anchor" href="#balaiconpicker"><span class="octicon octicon-link"></span></a>bala.IconPicker</h3>
+
+		<p>Quick Demo</p>
+
+		<table>
+			<tr>
+				<td width="100px">
+					<div class="myPicker" id="picker1">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png">
+					</div>
+				</td>
+				<td>
+					<div id="disp1" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="myPicker" id="picker2">
+						<img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png">
+						<img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png">
+					</div>
+				</td>
+				<td>
+					<div id="disp2" />
+				</td>
+			</tr>
+			<tr style="vertical-align:top;">
+				<td>
+					<div class="myPicker" id="picker3">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png">
+					</div>
+				</td>
+				<td>
+					<div id="disp3"><img src=""></div>
+				</td>
+			</tr>
+		</table>
+
+<pre><code>
+$ $('#picker1').IconPicker({
+$   'iconSize' : 30,
+$   'currSelection' : 0,
+$   'containerPosition' : 'right-4',
+$   'onDisplayIconChange' : function(imgIdx, imgUrl){
+$     $('#disp1').text('Current Icon ID = ' + imgIdx +
+$                      ' ;  Current Icon URL = ' + imgUrl);
+$   }
+$ });
+$ $('#picker2').IconPicker({
+$   'iconSize' : 30,
+$   'hasNullIcon' : false,
+$   'currSelection' : 0,
+$   'containerPosition' : 'right-4',
+$   'onDisplayIconChange' : function(imgIdx, imgUrl){
+$     $('#disp2').text('Current Icon ID = ' + imgIdx +
+$ 	                   ' ;  Current Icon URL = ' + imgUrl);
+$   }
+$ });
+$ $('#picker3').IconPicker({
+$   'iconSize' : 30,
+$   'hasNullIcon' : true,
+$   'currSelection' : 0,
+$   'containerPosition' : 'right-4',
+$   'onDisplayIconChange' : function(imgIdx, imgUrl){
+$     $('#disp3 img').attr('src', imgUrl);
+$   }
+$ });
+</code></pre>
 
 <p>Under construction...</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
+<!-- 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
 <h3>
@@ -58,6 +182,8 @@ $ git checkout gh-pages
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+    
+ -->
       </section>
     </div>
     <footer>
@@ -65,6 +191,5 @@ $ git checkout gh-pages
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
   </body>
 </html>
