@@ -79,17 +79,38 @@
 					'height': (__iconSize__ + (__iconMargin__ * 2)) * __containerHeight__ + __containerMargin__ + 17
 				});
 
-				// change conatiner position
+				// change container position
 				var displayerTop = __displayerDiv__.position().top;
 				var displayerLft = __displayerDiv__.position().left;
+				var containerTop = displayerTop;
+				var containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
 				switch(__containerPosition__)
 				{
+				case 'right-1':
+					containerTop = displayerTop - __containerDivDisp__.height() - (__iconMargin__ * 4);
+					containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
+					if (containerTop < 0) containerTop = 0;
+					break;
+				case 'right-2':
+					containerTop = displayerTop - __containerDivDisp__.height() + __displayerDiv__.height();
+					containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
+					if (containerTop < 0) containerTop = 0;
+					break;
+				case 'right-3':
+					containerTop = displayerTop - (__containerDivDisp__.height() - __displayerDiv__.height()) / 2;
+					containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
+					if (containerTop < 0) containerTop = 0;
+					break;
 				case 'right-4':
-					__containerDivDisp__.css({
-						'top':  displayerTop,
-						'left': displayerLft + __iconSize__ + (__iconMargin__ * 4)
-					});
+					containerTop = displayerTop;
+					containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
+					break;
+				case 'right-5':
+					containerTop = displayerTop + __displayerDiv__.height();
+					containerLft = displayerLft + __iconSize__ + (__iconMargin__ * 4);
+					break;
 				}
+				__containerDivDisp__.css({ 'top': containerTop, 'left':containerLft });
 				__containerDivDisp__.hide();
 
 				// set displayer icon
