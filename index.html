@@ -1,79 +1,106 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Iconpicker : ">
+<head>
+	<meta content="text/html; charset=UTF-8">
+	<title>Tell me the size</title>
+	<link rel="stylesheet" type="text/css" href="css/bala.IconPicker.jquery.css"></link>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="js/bala.IconPicker.jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#picker1').IconPicker({
+				'iconSize' : 50,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker2').IconPicker({
+				'iconSize' : 50,
+				'hasNullIcon' : false,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker3').IconPicker({
+				'iconSize' : 80,
+				'hasNullIcon' : true,
+				'currSelection' : 0,
+				'containerPosition' : 'right-4',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp3 img').attr('src', imgUrl);
+				}
+			});
+		});
+	</script>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<body>
+	<table>
+		<tr>
+			<td width="100px">
+				<div class="myPicker" id="picker1">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp1" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="myPicker" id="picker2">
+					<img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png">
+					<img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp2" />
+			</td>
+		</tr>
+		<tr style="vertical-align:top;">
+			<td>
+				<div class="myPicker" id="picker3">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp3"><img src=""></div>
+			</td>
+		</tr>
+	</table>
+</body>
 
-    <title>Iconpicker</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/balachuang/IconPicker">View on GitHub</a>
-
-          <h1 id="project_title">Iconpicker</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/balachuang/IconPicker/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/balachuang/IconPicker/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Iconpicker maintained by <a href="https://github.com/balachuang">balachuang</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
 </html>
