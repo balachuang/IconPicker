@@ -28,7 +28,7 @@
 	"bugs": "https://github.com/balachuang/IconPicker/issues",
 	"homepage": "http://balachuang.github.io/IconPicker",
 	"docs": "https://github.com/balachuang/IconPicker",
-	"download": "https://github.com/balachuang/IconPicker",
+	"download": "https://github.com/balachuang/IconPicker/archive/master.zip",
 	"dependencies": {
 		"jquery": ">=1.8"
 	}
