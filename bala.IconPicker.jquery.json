@@ -1,13 +1,14 @@
 {
 	"name": "bala.IconPicker",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"title": "bala.IconPicker",
 	"description": "A simple jQuery Icon Picker plugin.",
 	"keywords": [
 		"icon",
 		"picker",
 		"iconpicker",
-		"ui"
+		"select",
+		"image"
 	],
 	"author": {
 		"name": "Bala Chuang",
