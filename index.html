@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Iconpicker by balachuang</title>
+    <title>IconPicker Home</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <link rel="stylesheet" href="css/bala.IconPicker.jquery.css">
-    <!-- script src="javascripts/scale.fix.js"></script -->
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
     <script src="js/bala.IconPicker.jquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,28 +17,54 @@
     <![endif]-->
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#picker1').IconPicker({
+			$('#lp1').IconPicker({
 				'iconSize' : 30,
 				'currSelection' : 0,
-				'containerPosition' : 'right-4',
+				'containerPosition' : 'right-bottom',
 				'onDisplayIconChange' : function(imgIdx, imgUrl){
 					$('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
 				}
 			});
-			$('#picker2').IconPicker({
+			$('#lp2').IconPicker({
 				'iconSize' : 30,
 				'hasNullIcon' : false,
 				'currSelection' : 0,
-				'containerPosition' : 'right-4',
+				'containerPosition' : 'right-middle',
 				'onDisplayIconChange' : function(imgIdx, imgUrl){
 					$('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
 				}
 			});
-			$('#picker3').IconPicker({
+			$('#lp3').IconPicker({
 				'iconSize' : 30,
 				'hasNullIcon' : true,
 				'currSelection' : 0,
-				'containerPosition' : 'right-4',
+				'containerPosition' : 'right-top',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp3 img').attr('src', imgUrl);
+				}
+			});
+			$('#rp1').IconPicker({
+				'iconSize' : 30,
+				'currSelection' : 0,
+				'containerPosition' : 'left-bottom',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#rp2').IconPicker({
+				'iconSize' : 30,
+				'hasNullIcon' : false,
+				'currSelection' : 0,
+				'containerPosition' : 'left-middle',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#rp3').IconPicker({
+				'iconSize' : 30,
+				'hasNullIcon' : true,
+				'currSelection' : 0,
+				'containerPosition' : 'left-top',
 				'onDisplayIconChange' : function(imgIdx, imgUrl){
 					$('#disp3 img').attr('src', imgUrl);
 				}
@@ -61,14 +86,12 @@
 		</ul>
 	</header>
 	<section>
-		<h3><a name="balaiconpicker" class="anchor" href="#balaiconpicker"><span class="octicon octicon-link"></span></a>bala.IconPicker</h3>
+		<h3><a name="balaiconpicker" class="anchor" href="#balaiconpicker"><span class="octicon octicon-link"></span></a>Quick Demo & Code Sample</h3>
 
-		<p>Quick Demo</p>
-
-		<table>
+		<table width="100%">
 			<tr>
-				<td width="100px">
-					<div class="myPicker" id="picker1">
+				<td style="width:50px; text-align:left;">
+					<div class="myPicker" id="lp1" style="position:relative;">
 						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png">
 						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png">
 						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png">
@@ -82,10 +105,22 @@
 				<td>
 					<div id="disp1" />
 				</td>
+				<td style="width:50px; text-align:right;">
+					<div class="myPicker" id="rp1" style="position:relative;">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png">
+					</div>
+				</td>
 			</tr>
 			<tr>
-				<td>
-					<div class="myPicker" id="picker2">
+				<td style="width:50px; text-align:left;">
+					<div class="myPicker" id="lp2" style="position:relative;">
 						<img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png">
 						<img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png">
 						<img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png">
@@ -109,10 +144,32 @@
 				<td>
 					<div id="disp2" />
 				</td>
+				<td style="width:50px; text-align:right;">
+					<div class="myPicker" id="rp2" style="position:relative;">
+						<img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png">
+						<img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png">
+						<img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png">
+						<img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png">
+					</div>
+				</td>
 			</tr>
 			<tr style="vertical-align:top;">
-				<td>
-					<div class="myPicker" id="picker3">
+				<td style="width:50px; text-align:left;">
+					<div class="myPicker" id="lp3" style="position:relative;">
 						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png">
 						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png">
 						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png">
@@ -121,41 +178,187 @@
 						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png">
 					</div>
 				</td>
-				<td>
+				<td style="text-align:center;">
 					<div id="disp3"><img src=""></div>
+				</td>
+				<td style="width:50px; text-align:right;">
+					<div class="myPicker" id="rp3" style="position:relative;">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png">
+						<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png">
+					</div>
 				</td>
 			</tr>
 		</table>
 
 <pre><code>
-$ $('#picker1').IconPicker({
-$   'iconSize' : 30,
-$   'currSelection' : 0,
-$   'containerPosition' : 'right-4',
-$   'onDisplayIconChange' : function(imgIdx, imgUrl){
-$     $('#disp1').text('Current Icon ID = ' + imgIdx +
-$                      ' ;  Current Icon URL = ' + imgUrl);
-$   }
-$ });
-$ $('#picker2').IconPicker({
-$   'iconSize' : 30,
-$   'hasNullIcon' : false,
-$   'currSelection' : 0,
-$   'containerPosition' : 'right-4',
-$   'onDisplayIconChange' : function(imgIdx, imgUrl){
-$     $('#disp2').text('Current Icon ID = ' + imgIdx +
-$ 	                   ' ;  Current Icon URL = ' + imgUrl);
-$   }
-$ });
-$ $('#picker3').IconPicker({
-$   'iconSize' : 30,
-$   'hasNullIcon' : true,
-$   'currSelection' : 0,
-$   'containerPosition' : 'right-4',
-$   'onDisplayIconChange' : function(imgIdx, imgUrl){
-$     $('#disp3 img').attr('src', imgUrl);
-$   }
-$ });
+&lt;script&gt;
+$(document).ready(function(){
+  $('#lp1').IconPicker({
+    'iconSize' : 30,
+    'currSelection' : 0,
+    'containerPosition' : 'right-bottom',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+    }
+  });
+  $('#lp2').IconPicker({
+    'iconSize' : 30,
+    'hasNullIcon' : false,
+    'currSelection' : 0,
+    'containerPosition' : 'right-middle',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+    }
+  });
+  $('#lp3').IconPicker({
+    'iconSize' : 30,
+    'hasNullIcon' : true,
+    'currSelection' : 0,
+    'containerPosition' : 'right-top',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp3 img').attr('src', imgUrl);
+    }
+  });
+  $('#rp1').IconPicker({
+    'iconSize' : 30,
+    'currSelection' : 0,
+    'containerPosition' : 'left-bottom',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+    }
+  });
+  $('#rp2').IconPicker({
+    'iconSize' : 30,
+    'hasNullIcon' : false,
+    'currSelection' : 0,
+    'containerPosition' : 'left-middle',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+    }
+  });
+  $('#rp3').IconPicker({
+    'iconSize' : 30,
+    'hasNullIcon' : true,
+    'currSelection' : 0,
+    'containerPosition' : 'left-top',
+    'onDisplayIconChange' : function(imgIdx, imgUrl){
+      $('#disp3 img').attr('src', imgUrl);
+    }
+  });
+});
+&lt;/script&gt;
+
+&lt;body&gt;
+&lt;table width="100%"&gt;
+  &lt;tr&gt;
+    &lt;td style="width:50px; text-align:left;"&gt;
+      &lt;div class="myPicker" id="lp1" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;div id="disp1" /&gt;
+    &lt;/td&gt;
+    &lt;td style="width:50px; text-align:right;"&gt;
+      &lt;div class="myPicker" id="rp1" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td style="width:50px; text-align:left;"&gt;
+      &lt;div class="myPicker" id="lp2" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;div id="disp2" /&gt;
+    &lt;/td&gt;
+    &lt;td style="width:50px; text-align:right;"&gt;
+      &lt;div class="myPicker" id="rp2" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr style="vertical-align:top;"&gt;
+    &lt;td style="width:50px; text-align:left;"&gt;
+      &lt;div class="myPicker" id="lp3" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td style="text-align:center;"&gt;
+      &lt;div id="disp3"&gt;&lt;img src=""&gt;&lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td style="width:50px; text-align:right;"&gt;
+      &lt;div class="myPicker" id="rp3" style="position:relative;"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png"&gt;
+        &lt;img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png"&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
 </code></pre>
 
 <p>Under construction...</p>
