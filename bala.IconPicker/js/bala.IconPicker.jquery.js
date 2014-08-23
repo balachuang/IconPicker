@@ -8,6 +8,7 @@
 
 		var __iconSize__ = 30;
 		var __currSelection__ = 0;
+		var __currSelectionUrl__ = '';
 		var __hasNullIcon__ = true;
 		var __containerPosition__ = 'right-bottom';
 		var __containerWidth__ = 5;
@@ -20,6 +21,7 @@
 
 		if (parameter.iconSize != undefined) __iconSize__ = parameter.iconSize;
 		if (parameter.currSelection != undefined) __currSelection__ = parameter.currSelection;
+		if (parameter.currSelectionUrl != undefined) __currSelectionUrl__ = parameter.currSelectionUrl;
 		if (parameter.hasNullIcon != undefined) __hasNullIcon__ = parameter.hasNullIcon;
 		if (parameter.containerPosition != undefined) __containerPosition__ = parameter.containerPosition;
 		if (parameter.containerWidth != undefined) __containerWidth__ = parameter.containerWidth;
@@ -34,7 +36,14 @@
 				var imgObjs = baseDiv.find('img');
 				var imgUrls = new Array();
 				imgObjs.each(function(){
-					imgUrls.push($(this).attr('src'));
+					var thisUrl = $(this).attr('src');
+					if (thisUrl == __currSelectionUrl__)
+					{
+						// if user input current image url, change current select index
+						if (__hasNullIcon__) __currSelection__ = $(this).index() + 1;
+						else                 __currSelection__ = $(this).index();
+					}
+					imgUrls.push(thisUrl);
 				});
 				imgObjs.remove();
 
@@ -161,9 +170,15 @@
 				__containerDivDisp__.hide();
 
 				// set displayer icon
-				__displayerDiv__.css({
-					'background-image': __containerDiv__.find('div:eq(' + __currSelection__ + ')').css('background-image')
-				});
+				if ((__currSelectionUrl__ != undefined) && (__currSelectionUrl__ != '')){
+					__displayerDiv__.css({
+						'background-image': 'url(\'' + __currSelectionUrl__ + '\')'
+					});
+				}else{
+					__displayerDiv__.css({
+						'background-image': __containerDiv__.find('div:eq(' + __currSelection__ + ')').css('background-image')
+					});
+				}
 
 				// apply event handler
 				__displayerDiv__.click(function(){
@@ -177,15 +192,16 @@
 				__containerDiv__.find('div').click(function(){
 					__displayerDiv__.css('background-image', $(this).css('background-image'));
 					__currSelection__ = $(this).index();
+					__currSelectionUrl__ = getSelectedUrl();
 					__containerDivDisp__.slideUp(100);
 
 					// trigger onDisplayChange event
-					__onDisplayIconChange__( __currSelection__, getSelectedUrl());
+					__onDisplayIconChange__( __currSelection__, __currSelectionUrl__);
 				});
 			}
 		});
 
-		function getSelectedIndex(){ return __currSelection__; };
+		//function getSelectedIndex(){ return __currSelection__; };
 		function getSelectedUrl(){
 			var retUrl = __containerDiv__.find('div:eq(' + __currSelection__ + ')').css('background-image');
 			var regex = new RegExp(/url\("?(.+)"?\)/);
@@ -193,15 +209,15 @@
 			if (retUrl.indexOf('bala.IconPicker.nullIcon.png', retUrl.length-28) >= 0) retUrl = '';
 			return retUrl;
 		};
-		function setSelectedIndex(idx) {
-			if (idx <= __containerDiv__.find('div').length) {
-				__currSelection__ = idx;
-				__displayerDiv__.css({'background-image': getSelectedUrl()});
-			}
-		};
-		function setSelectedUrl(url){
-			__displayerDiv__.css({'background-image': url});
-		};
+		//function setSelectedIndex(idx) {
+		//	if (idx <= __containerDiv__.find('div').length) {
+		//		__currSelection__ = idx;
+		//		__displayerDiv__.css({'background-image': getSelectedUrl()});
+		//	}
+		//};
+		//function setSelectedUrl(url){
+		//	__displayerDiv__.css({'background-image': url});
+		//};
 	};
 
 })(jQuery);

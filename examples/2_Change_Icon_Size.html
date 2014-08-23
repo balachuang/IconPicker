@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=UTF-8">
+	<title>IconPicker example - 1</title>
+	<link rel="stylesheet" type="text/css" href="../bala.IconPicker/css/bala.IconPicker.jquery.css"></link>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="../bala.IconPicker/js/bala.IconPicker.jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#picker1').IconPicker({
+				'iconSize' : 50,
+				'currSelection' : 0,
+				'containerPosition' : 'right-bottom',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp1').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker2').IconPicker({
+				'iconSize' : 50,
+				'hasNullIcon' : false,
+				'currSelection' : 0,
+				'containerPosition' : 'right-bottom',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp2').text('Current Icon ID = ' + imgIdx + ' ;  Current Icon URL = ' + imgUrl);
+				}
+			});
+			$('#picker3').IconPicker({
+				'iconSize' : 80,
+				'hasNullIcon' : true,
+				'currSelection' : 0,
+				'containerPosition' : 'right-middle',
+				'onDisplayIconChange' : function(imgIdx, imgUrl){
+					$('#disp3 img').attr('src', imgUrl);
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td width="100px">
+				<div class="myPicker" id="picker1">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Finder-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Mail-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Messages-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Chrome-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Firefox-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Apple-Timemachine-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Skype-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ampeross/smooth/128/Twitter-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp1" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="myPicker" id="picker2">
+					<img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/artdesigner/urban-stories/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/oldies/128/Old-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshock/super-vista-general/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/blue-home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/ergosign/free-wintertime/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/firstfear/whistlepuff/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Little-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/collection/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/iconshow/construction/128/House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/archigraphs/christmas/128/Candy-House-icon.png">
+					<img src="http://icons.iconarchive.com/icons/joker-design/circus/128/home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/raindropmemory/laboratory/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/mag1cwind0w/akisame/128/Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/aha-soft/large-business/128/Two-storied-house-icon.png">
+					<img src="http://icons.iconarchive.com/icons/awicons/vista-artistic/128/3-Gray-Home-icon.png">
+					<img src="http://icons.iconarchive.com/icons/proycontec/construction/128/home-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp2" />
+			</td>
+		</tr>
+		<tr style="vertical-align:top;">
+			<td>
+				<div class="myPicker" id="picker3">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Blue-Dress-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Girls-Red-Dress-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Flowers-Wildflowers-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/3D-Eagle-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Network-1-icon.png">
+					<img src="http://icons.iconarchive.com/icons/itzikgur/my-seven/512/Music-Piano-icon.png">
+				</div>
+			</td>
+			<td>
+				<div id="disp3"><img src=""></div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>
