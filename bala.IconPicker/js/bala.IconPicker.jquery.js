@@ -19,14 +19,17 @@
 		var __containerDivDisp__ = null;
 		var __containerDiv__ = null;
 
-		if (parameter.iconSize != undefined) __iconSize__ = parameter.iconSize;
-		if (parameter.currSelection != undefined) __currSelection__ = parameter.currSelection;
-		if (parameter.currSelectionUrl != undefined) __currSelectionUrl__ = parameter.currSelectionUrl;
-		if (parameter.hasNullIcon != undefined) __hasNullIcon__ = parameter.hasNullIcon;
-		if (parameter.containerPosition != undefined) __containerPosition__ = parameter.containerPosition;
-		if (parameter.containerWidth != undefined) __containerWidth__ = parameter.containerWidth;
-		if (parameter.containerHeight != undefined) __containerHeight__ = parameter.containerHeight;
-		if (parameter.onDisplayIconChange != undefined) __onDisplayIconChange__ = parameter.onDisplayIconChange;
+		if (parameter != undefined)
+		{
+			if (parameter.iconSize != undefined) __iconSize__ = parameter.iconSize;
+			if (parameter.currSelection != undefined) __currSelection__ = parameter.currSelection;
+			if (parameter.currSelectionUrl != undefined) __currSelectionUrl__ = parameter.currSelectionUrl;
+			if (parameter.hasNullIcon != undefined) __hasNullIcon__ = parameter.hasNullIcon;
+			if (parameter.containerPosition != undefined) __containerPosition__ = parameter.containerPosition;
+			if (parameter.containerWidth != undefined) __containerWidth__ = parameter.containerWidth;
+			if (parameter.containerHeight != undefined) __containerHeight__ = parameter.containerHeight;
+			if (parameter.onDisplayIconChange != undefined) __onDisplayIconChange__ = parameter.onDisplayIconChange;
+		}
 
 		this.each(function(){
 			var baseDiv = $(this);
